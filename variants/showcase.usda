@@ -1,0 +1,75 @@
+#usda 1.0
+
+# Completely default, it's a blue box, at the origin
+def "Model_0_0" (
+    append references = @multiple-variants.usda@
+)
+{
+}
+
+# The green sphere, translated to the middle of the first row
+def "Model_0_1" (
+    append references = @multiple-variants.usda@
+    variants = {
+        string color = "green"
+        string shape = "sphere"
+    }
+)
+{
+    matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (5, 0, 0, 1) )
+    uniform token[] xformOpOrder = ["xformOp:transform"]
+}
+
+# A red box, notice we use the default box variant without explicitly setting it
+def "Model_0_2" (
+    append references = @multiple-variants.usda@
+    variants = {
+        string color = "red"
+    }
+)
+{
+    matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (10, 0, 0, 1) )
+    uniform token[] xformOpOrder = ["xformOp:transform"]
+}
+
+# I added a transform to move the whole second row together. Aside from that it looks
+# a lot like the first row.
+def Xform "Row2"
+{
+    matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0, 5, 0, 1) )
+    uniform token[] xformOpOrder = ["xformOp:transform"]
+
+    def "Model_1_0" (
+        append references = @multiple-variants.usda@
+        variants = {
+            string color = "red"
+            string shape = "sphere"
+        }
+    )
+    {
+        matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0, 0, 0, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform"]
+    }
+
+    def "Model_1_1" (
+        append references = @multiple-variants.usda@
+        variants = {
+            string color = "green"
+        }
+    )
+    {
+        matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (5, 0, 0, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform"]
+    }
+
+    def "Model_1_2" (
+        append references = @multiple-variants.usda@
+        variants = {
+            string shape = "sphere"
+        }
+    )
+    {
+        matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (10, 0, 0, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform"]
+    }
+}
