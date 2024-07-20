@@ -1,6 +1,6 @@
 # List Editing
 
-See the original article [Prepend, Append... What?](www.confusing-acronym.com/prepend-append-what/)
+See the original article [Prepend, Append... What?](https://www.confusing-acronym.com/prepend-append-what/)
 
 You can use this script to try out different list operations if you're interested.
 For instance you could edit the list operations in the zoo files, then run
