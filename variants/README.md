@@ -1,6 +1,7 @@
 # Variants
 
-See the Variants article for more information.
+See the [Variants](https://www.confusing-acronym.com/openusd-variants/)
+article for more information.
 
 ## model.usda
 
