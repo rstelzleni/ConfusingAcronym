@@ -1,0 +1,15 @@
+#usda 1.0
+
+def Scope "Example"
+{
+    custom rel primList = <a>
+    
+    custom rel primListLonger = [<a>, <b>, <c>]
+
+    def Scope "a" {}
+    def Scope "b" {}
+    def Scope "c" {}
+    def Scope "d" {}
+    def Scope "e" {}
+    def Scope "f" {}
+}

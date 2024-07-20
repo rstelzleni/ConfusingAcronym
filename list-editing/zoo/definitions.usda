@@ -1,0 +1,23 @@
+#usda 1.0
+
+def Scope "Example"
+{
+    custom rel primList_1 = <a>
+    custom rel primList_2 = <a>
+    custom rel primList_3 = <a>
+    custom rel primList_4 = <a>
+    custom rel primList_5 = <a>
+    
+    custom rel primListLonger_1 = [<a>, <b>, <c>]
+    custom rel primListLonger_2 = [<a>, <b>, <c>]
+    custom rel primListLonger_3 = [<a>, <b>, <c>]
+    custom rel primListLonger_4 = [<a>, <b>, <c>]
+    custom rel primListLonger_5 = [<a>, <b>, <c>]
+
+    def Scope "a" {}
+    def Scope "b" {}
+    def Scope "c" {}
+    def Scope "d" {}
+    def Scope "e" {}
+    def Scope "f" {}
+}
