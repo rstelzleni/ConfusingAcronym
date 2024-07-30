@@ -1,0 +1,49 @@
+#usda 1.0
+
+def Xform "World"
+{
+    def "Item_1_1" (
+        references = @box.usda@
+    )
+    {
+        matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (-5, 2.5, 0, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform"]
+    }
+    def "Item_1_2" (
+        references = @ball.usda@
+    )
+    {
+        matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0, 2.5, 0, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform"]
+    }
+    def "Item_1_3" (
+        references = @box.usda@
+    )
+    {
+        matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (5, 2.5, 0, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform"]
+    }
+
+    def "Item_2_1" (
+        references = @ball.usda@
+    )
+    {
+        matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (-5, -2.5, 0, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform"]
+    }
+    def "Item_2_2" (
+        references = @box.usda@
+    )
+    {
+        matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0, -2.5, 0, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform"]
+    }
+    def "Item_2_3" (
+        references = @ball.usda@
+    )
+    {
+        matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (5, -2.5, 0, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform"]
+    }
+
+}
